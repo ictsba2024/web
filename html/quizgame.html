@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rapid Test: The Epidemic Quiz</title>
+        <!-- Stylesheet -->
+    <link rel="stylesheet" href="../css/quizgame.css" />
+    <link rel="stylesheet" href="../css/page.css" />
+    
+  </head>
+  <body>
+    <nav>
+      <a href="index.html" class="logo"><img src="../multimedia/index/logo.png" alt="logo" height=50px width="auto"></a>
+      <div class="menu">
+        <div class="btn">
+          <i class="close-btn">&#9776;</i>
+        </div>
+        <a href="index.html" class="active">Home</a>
+        <a href="FAQ.html">FAQ</a>
+        <a href="diseases.html">Diseases</a>
+        <a href="PM.html">Preventive measure</a>
+        <a href="quizgame.html">Rapid Test</a>
+        <a href="form.html">Registation</a>
+      </div>
+      <div class="btn">
+        <i class="menu-btn">&#9776;</i>
+      </div>
+    </nav>
+  
+    <div class="main">
+    <div class="start-screen">
+        <img class="test" src="../multimedia/quizgame/negative.png" alt="negative testing result">
+        <p class="start-screen-text">Rapid Test: The Epidemic Quiz</p>
+        <button id="start-button" onclick="select()">Start</button>
+        <br>
+        <button id="start-button" onclick="start()">How to play</button>
+    </div>
+    
+    <div class="select-screen hide">
+      <div class="card1">
+        <button onclick="start1()"><img src="../multimedia/quizgame/covid19.png" alt="Covid-19" width="300px"></button>
+        <div class="container">
+          <h4><b>Covid-19</b></h4> 
+          <p>COVID-19, also known as the coronavirus disease 2019, is an infectious respiratory disease caused by the SARS-CoV-2 virus.</p> 
+        </div>
+      </div>
+      <div class="card2">
+      <button onclick="start0()"><img src="../multimedia/quizgame/flu.png" alt="Flu" width="300px"></button>
+        <div class="container">
+          <h4><b>Flu</b></h4> 
+          <p>The flu, short for influenza, is a highly contagious viral infection that affects the respiratory system.</p> 
+        </div>
+      </div>
+    </div>
+    <div class="area hide">
+        <div class="area1">
+        <div id="timer" class="timer"></div>
+        <div id="question"></div>
+        <div id="virushp">25</div>
+        <div id="virusimage"></div>
+      </div>
+      <div class="area2">
+        <div id="humanhp">5</div>
+        <div id="choice">
+            <button class="choice0" id="choice0" onclick="check(0)"></button>
+            <button class="choice1" id="choice1" onclick="check(1)"></button>
+            <button class="choice2" id="choice2" onclick="check(2)"></button>
+            <button class="choice3" id="choice3" onclick="check(3)"></button>
+        </div>
+        <div>
+            <button id="eraser" onclick="eraser()"></button>
+            <button id="skip" onclick="skip()"></button>
+            <button id="freeze" onclick="freeze()"></button>
+        </div>
+        </div>
+    </div>
+    <div class="end-screen hide">
+      <div id="finalscore"></div>
+      <div id="finalimage"></div>
+      <button id="restart-button" onclick="restart()">Restart</button>
+    </div>
+    </div>
+    
+    <!-- Script -->
+    <script src="../js/quizgame.js"></script>
+    <script src="../js/page.js"></script>
+    
+  </body>
+</html>
